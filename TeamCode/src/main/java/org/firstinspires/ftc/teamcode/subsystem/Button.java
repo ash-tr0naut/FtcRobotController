@@ -35,18 +35,18 @@ public class Button {
 //    public void two() {
 //        this.frontRightMotor.setPower(constants.Button.powerTwo);
 //    }
-    public void stop() {
-        this.frontLeftMotor.setPower(0);
-        this.frontRightMotor.setPower(0);
-        this.backRightMotor.setPower(0);
-        this.backLeftMotor.setPower(0);
-    }
+//    public void stop() {
+//        this.frontLeftMotor.setPower(0);
+//        this.frontRightMotor.setPower(0);
+//        this.backLeftMotor.setPower(0);
+//        this.backRightMotor.setPower(0);
+//    }
     public void setControl(Gamepad gamepad) {
         double leftPower;
         double rightPower;
 
         double drive = -gamepad.left_stick_y;
-        double turn  =  gamepad.right_stick_x;
+        double turn  =  gamepad.right_stick_y;
         leftPower    = Range.clip(drive + turn, -1.0, 1.0) ;
         rightPower   = Range.clip(drive - turn, -1.0, 1.0) ;
 
