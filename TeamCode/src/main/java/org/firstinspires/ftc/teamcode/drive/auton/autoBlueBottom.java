@@ -1,11 +1,16 @@
-package org.firstinspires.ftc.teamcode.drive.auton.;
+package org.firstinspires.ftc.teamcode.drive.auton;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-@Autonomous name="autoBlueBottom)", group="Auto")
+@Autonomous (name="autoBlueBottom)", group="Auto")
 public class autoBlueBottom extends LinearOpMode {
+
+    @Override
+    public void runOpMode() throws InterruptedException {
+
+    }
 
     public class MyFIRSTJavaOpMode extends LinearOpMode {
         CRServo leftWheel;
@@ -34,6 +39,7 @@ public class autoBlueBottom extends LinearOpMode {
 
             leftShoulder.setPower(-1);
             rightShoulder.setPower(-1);
+            wrist.setPower(-1);
 
             frontLeftDrive.setPower(1);
             frontRightDrive.setPower(1);
@@ -49,10 +55,10 @@ public class autoBlueBottom extends LinearOpMode {
 
             sleep(611);
 
-            frontLeftDrive.setPower(-1);
-            frontRightDrive.setPower(1);
-            backLeftDrive.setPower(1);
-            backRightDrive.setPower(-1);
+            frontLeftDrive.setPower(1);
+            frontRightDrive.setPower(-1);
+            backLeftDrive.setPower(-1);
+            backRightDrive.setPower(1);
 
             sleep(2150);
 

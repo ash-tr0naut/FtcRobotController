@@ -4,8 +4,13 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-@Autonomous name="autoRedTop)", group="Auto")
+@Autonomous (name="autoRT)", group="Autonomous")
 public class autoRedTop extends LinearOpMode {
+    @Override
+    public void runOpMode() throws InterruptedException {
+
+    }
+
     public class MyFIRSTJavaOpMode extends LinearOpMode {
         CRServo leftWheel;
         CRServo rightWheel;
@@ -29,9 +34,9 @@ public class autoRedTop extends LinearOpMode {
             leftShoulder = hardwareMap.get(DcMotor.class, "leftShoulder");
             rightShoulder = hardwareMap.get(DcMotor.class, "rightShoulder");
 
-            wrist.setPower(-1);
-            leftShoulder.setPower(-1);
-            rightShoulder.setPower(-1);
+//            wrist.setPower(-1);
+//            leftShoulder.setPower(-1);
+//            rightShoulder.setPower(-1);
 
             frontLeftDrive.setPower(1);
             frontRightDrive.setPower(1);
