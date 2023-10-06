@@ -1,13 +1,12 @@
 package org.firstinspires.ftc.teamcode.drive.auton.;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 @Autonomous name="autoRedBottom)", group="Auto")
-public class autoRedBottom extends LinearOpMode {
-
-public class MyFIRSTJavaOpMode extends LinearOpMode {
+public class autoRedBottom extends OpMode {
+public class MyFIRSTJavaOpMode extends OpMode {
     CRServo leftWheel;
     CRServo rightWheel;
     DcMotor backLeftDrive;
@@ -65,5 +64,4 @@ public class MyFIRSTJavaOpMode extends LinearOpMode {
 
     }
 }
-
 }
