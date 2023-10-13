@@ -11,7 +11,6 @@ public class autoBlueBottom extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
 
     }
-
     public class MyFIRSTJavaOpMode extends LinearOpMode {
         CRServo leftWheel;
         CRServo rightWheel;
