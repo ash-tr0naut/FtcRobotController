@@ -52,7 +52,7 @@ public class Controller {
     }
 
     public void setControl(Gamepad gamepad) {
-        double leftPower = 0;
+        double leftPower;
         double rightPower;
 
         double drive = -gamepad.left_stick_y;
@@ -74,9 +74,40 @@ public class Controller {
         if (gamepad.y) {
             this.liftServo.setPower(1);
         } else {
-            if (gamepad.a) ;
-            {
+            if (gamepad.a) {
                 this.liftServo.setPower(-1);
+            }
+        }
+        if (gamepad.dpad_up) {
+            this.frontLeftMotor.setPower(1);
+            this.backLeftMotor.setPower(1);
+            this.frontRightMotor.setPower(1);
+            this.backRightMotor.setPower(1);
+        } else {
+            if (gamepad.dpad_down) {
+                this.frontLeftMotor.setPower(-1);
+                this.backLeftMotor.setPower(-1);
+                this.frontRightMotor.setPower(-1);
+                this.backRightMotor.setPower(-1);
+            }else {
+                if (gamepad.dpad_left) {
+                    this.frontLeftMotor.setPower(-1);
+                    this.backLeftMotor.setPower(1);
+                    this.frontRightMotor.setPower(1);
+                    this.backRightMotor.setPower(-1);
+                } else {
+                    if (gamepad.dpad_right) {
+                        this.frontLeftMotor.setPower(1);
+                        this.backLeftMotor.setPower(-1);
+                        this.frontRightMotor.setPower(-1);
+                        this.backRightMotor.setPower(1);
+                    } else {
+                        this.frontLeftMotor.setPower(0);
+                        this.backLeftMotor.setPower(0);
+                        this.frontRightMotor.setPower(0);
+                        this.backRightMotor.setPower(0);
+                    }
+                }
             }
         }
     }

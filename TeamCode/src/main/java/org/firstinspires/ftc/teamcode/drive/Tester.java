@@ -7,7 +7,7 @@ import org.firstinspires.ftc.teamcode.subsystem.Controller;
 @TeleOp(name="Test", group="OpMode")
 public class Tester extends OpMode {
 
-    private Controller button = new Controller();
+    private final Controller button = new Controller();
     @Override
     public void init() {
         this.button.init(hardwareMap);
