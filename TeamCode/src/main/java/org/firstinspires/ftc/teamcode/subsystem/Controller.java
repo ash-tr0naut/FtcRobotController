@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.util.Range;
 
 import org.firstinspires.ftc.teamcode.constants;
 
-public class Button {
+public class Controller {
     private DcMotor frontLeftMotor;
     private DcMotor frontRightMotor;
     private DcMotor backLeftMotor;
@@ -16,7 +16,7 @@ public class Button {
     private DcMotor intakeMotor;
     private DcMotor liftServo;
 
-    public Button() {
+    public Controller() {
     }
 
     public void init(HardwareMap hwMap) {
