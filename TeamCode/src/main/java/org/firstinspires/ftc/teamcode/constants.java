@@ -12,7 +12,7 @@ public class constants {
         public static final String frontRightMotor = "powerFour";
         public static final String planeLaunchMotor = "powerFive";
         public static String intakeMotor = "powerSix";
-        public static String liftMotor = "powerSeven";
+        public static String liftServo = "powerSeven";
         public static String clawMotor = "powerEight";
         public static double powerOne;
         public static double powerTwo;

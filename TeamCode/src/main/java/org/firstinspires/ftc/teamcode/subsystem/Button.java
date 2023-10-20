@@ -1,6 +1,5 @@
 package org.firstinspires.ftc.teamcode.subsystem;
 
-import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -15,8 +14,7 @@ public class Button {
     private DcMotor backRightMotor;
     private DcMotor planeLaunchMotor;
     private DcMotor intakeMotor;
-    private DcMotor liftMotor;
-    private CRServo clawMotor;
+    private DcMotor liftServo;
 
     public Button() {
     }
@@ -28,8 +26,7 @@ public class Button {
         this.backRightMotor = hwMap.get(DcMotor.class, constants.Button.backRightMotor);
         this.planeLaunchMotor = hwMap.get(DcMotor.class, constants.Button.planeLaunchMotor);
         this.intakeMotor = hwMap.get(DcMotor.class, constants.Button.intakeMotor);
-        this.liftMotor = hwMap.get(DcMotor.class, constants.Button.liftMotor);
-        this.clawMotor = hwMap.get(CRServo.class, constants.Button.clawMotor);
+        this.liftServo = hwMap.get(DcMotor.class, constants.Button.liftServo);
         this.frontLeftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         this.frontRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         this.backLeftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -37,12 +34,14 @@ public class Button {
         this.planeLaunchMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
 
-        public void one() {
+    public void one() {
         this.frontLeftMotor.setPower(constants.Button.powerOne);
     }
+
     public void two() {
         this.frontRightMotor.setPower(constants.Button.powerTwo);
     }
+
     public void stop() {
         this.frontLeftMotor.setPower(0);
         this.frontRightMotor.setPower(0);
@@ -50,8 +49,8 @@ public class Button {
         this.backRightMotor.setPower(0);
         this.planeLaunchMotor.setPower(0);
         this.intakeMotor.setPower(0);
-        this.clawMotor.setPower(0);
     }
+
     public void setControl(Gamepad gamepad) {
         double leftPower = 0;
         double rightPower;
@@ -65,23 +64,20 @@ public class Button {
         this.frontRightMotor.setPower(rightPower);
         this.backLeftMotor.setPower(leftPower);
         this.backRightMotor.setPower(rightPower);
-            if (gamepad.x) {
-                this.planeLaunchMotor.setPower(1);
-            } else {
-                if (gamepad.b) {
-                    this.planeLaunchMotor.setPower(-1);
-                } else {
-                    if (gamepad.dpad_left) {
-                        this.clawMotor.setPower(1);
-                    } else {
-                        if (gamepad.dpad_right) {
-                            this.clawMotor.setPower(-1);
-                        } else {
-                            this.planeLaunchMotor.setPower(0);
-                        }
-                    }
-                }
+        if (gamepad.x) {
+            this.planeLaunchMotor.setPower(1);
+        } else {
+            if (gamepad.b) {
+                this.planeLaunchMotor.setPower(-1);
             }
-
+        }
+        if (gamepad.y) {
+            this.liftServo.setPower(1);
+        } else {
+            if (gamepad.a) ;
+            {
+                this.liftServo.setPower(-1);
+            }
         }
     }
+}
