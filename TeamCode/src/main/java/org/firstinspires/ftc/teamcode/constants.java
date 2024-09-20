@@ -10,10 +10,10 @@ public class constants {
         public static final String backRightMotor = "powerTwo";
         public static final String backLeftMotor = "powerThree";
         public static final String frontRightMotor = "powerFour";
-        public static final String planeLaunchMotor = "powerFive";
-        public static String intakeMotor = "powerSix";
-        public static String liftServo = "powerSeven";
-        public static String clawMotor = "powerEight";
+        public static final String armMotor1 = "powerFive";
+        public static final String armMotor2 = "powerSix";
+        public static final String clawServo1 = "powerSeven";
+        public static final String clawServo2 = "powerEight";
         public static double powerOne;
         public static double powerTwo;
 
