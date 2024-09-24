@@ -37,13 +37,13 @@ public class Controller {
         this.backRightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
 
-    public void one() {
-        this.frontLeftMotor.setPower(constants.Button.powerOne);
-    }
-
-    public void two() {
-        this.frontRightMotor.setPower(constants.Button.powerTwo);
-    }
+//    public void one() {
+//        this.frontLeftMotor.setPower(constants.Button.powerOne);
+//    }
+//
+//    public void two() {
+//        this.frontRightMotor.setPower(constants.Button.powerTwo);
+//    }
 
     public void stop() {
         this.frontLeftMotor.setPower(0);
@@ -69,24 +69,25 @@ public class Controller {
         this.frontRightMotor.setPower(rightPower);
         this.backLeftMotor.setPower(leftPower);
         this.backRightMotor.setPower(rightPower);
+
         if (gamepad.x) {
-            this.armMotor1.setPower(1);
-            this.armMotor2.setPower(-1);
+            this.armMotor1.setPower(0.7);
+            this.armMotor2.setPower(-0.7);
         } else {
             if (gamepad.b) {
-                this.armMotor1.setPower(-1);
-                this.armMotor2.setPower(1);
+                this.armMotor1.setPower(-0.7);
+                this.armMotor2.setPower(0.7);
             } else {
                 this.armMotor1.setPower(0);
                 this.armMotor2.setPower(0);
             }
             if (gamepad.y) {
-                this.clawServo1.setPosition(0);
+                this.clawServo1.setPosition(1);
                 this.clawServo2.setPosition(0);
             } else {
                 if (gamepad.a) {
-                    this.clawServo1.setPosition(0.7);
-                    this.clawServo2.setPosition(0.7);
+                    this.clawServo1.setPosition(0);
+                    this.clawServo2.setPosition(0.9);
                 }
             }
             if (gamepad.dpad_up) {

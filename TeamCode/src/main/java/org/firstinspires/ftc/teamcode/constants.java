@@ -14,8 +14,8 @@ public class constants {
         public static final String armMotor2 = "powerSix";
         public static final String clawServo1 = "powerSeven";
         public static final String clawServo2 = "powerEight";
-        public static double powerOne;
-        public static double powerTwo;
+//        public static double powerOne;
+//        public static double powerTwo;
 
 //        public static final double powerOne = 1;
 //        public static final double powerTwo = 1;
