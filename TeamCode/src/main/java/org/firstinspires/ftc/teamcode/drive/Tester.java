@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.teamcode.subsystem.Controller;
 
-@TeleOp(name="Test", group="OpMode")
+@TeleOp(name="Start", group="OpMode")
 public class Tester extends OpMode {
 
     private final Controller button = new Controller();
@@ -13,8 +13,8 @@ public class Tester extends OpMode {
         this.button.init(hardwareMap);
     }
 
-    @Override
-    public void start(){}
+//    @Override
+//    public void start(){}
 
     @Override
     public void loop(){
