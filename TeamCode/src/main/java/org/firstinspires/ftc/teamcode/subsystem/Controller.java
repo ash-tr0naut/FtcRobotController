@@ -100,7 +100,8 @@ public class Controller {
         } else {
             if (gamepad.dpad_down) {
                 this.slideMotor.setPower(-0.5);
-            }
+            } else {
+            this.slideMotor.setPower(0);
         }
 
 //            if (gamepad.dpad_up) {

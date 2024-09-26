@@ -2,10 +2,11 @@ package org.firstinspires.ftc.teamcode.drive;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+
 import org.firstinspires.ftc.teamcode.subsystem.Controller;
 
-@TeleOp(name="Start1", group="OpMode")
-public class Tester extends OpMode {
+@TeleOp(name="Start2", group="OpMode")
+public class Start2 extends OpMode {
 
     private final Controller button = new Controller();
     @Override
