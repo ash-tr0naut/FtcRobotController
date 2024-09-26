@@ -101,8 +101,8 @@ public class Controller {
             if (gamepad.dpad_down) {
                 this.slideMotor.setPower(-0.5);
             } else {
-            this.slideMotor.setPower(0);
-        }
+                this.slideMotor.setPower(0);
+            }
 
 //            if (gamepad.dpad_up) {
 //                this.frontLeftMotor.setPower(1);
@@ -137,6 +137,7 @@ public class Controller {
 //                }
 //            }
 //        }
+        }
     }
 }
 
